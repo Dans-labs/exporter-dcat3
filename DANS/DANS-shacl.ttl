@@ -56,9 +56,9 @@ exs:dcatDistributionShape a sh:NodeShape ;
 
 exs:vcardKindShape a sh:NodeShape ;
   sh:targetClass vcard:Kind ;
-  sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:datatype xsd:string ] ;
-  sh:property [ sh:path vcard:fn ;       sh:minCount 1 ; sh:datatype xsd:string ] ;
-  sh:property [ sh:path vcard:hasEmail ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
+  sh:property [ sh:path dct:identifier ; sh:minCount 1 ; sh:datatype xsd:string ] .
+  # sh:property [ sh:path vcard:fn ;       sh:minCount 1 ; sh:datatype xsd:string ] ;
+  # sh:property [ sh:path vcard:hasEmail ; sh:minCount 1 ; sh:nodeKind sh:IRI ] .
 
 exs:foafAgentShape  a sh:NodeShape ;
   sh:targetClass foaf:Agent ;
@@ -71,3 +71,5 @@ exs:spdxChecksumShape a sh:NodeShape ;
 
 exs:dctRightsStatementShape a sh:NodeShape ; 
   sh:targetClass dct:RightsStatement .
+
+# TODO: license instance of   dct:LicenseDocument

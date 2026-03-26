@@ -16,9 +16,11 @@ PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
 <https://dev.ssh.datastations.nl/>
         rdf:type           dcat:Catalog;
         dct:creator        <https://ror.org/008pnp284>;
-        dct:description    "<p>This Data Station allows you to deposit and search for data within the field of Social Sciences and Humanities.<BR> If you want to deposit data, please consult <a href=\"https://dans.knaw.nl/en/selection-policy-dans-data-stations/\">the selection policy</a> of the DANS Data Stations.</p>"@en;
-        dct:publisher      <https://ror.org/008pnp284>;
-        dct:title          "DANS Data Station Social Sciences and Humanities (dev)"@en;
+        dct:description    "<p>This Data Station allows you to deposit and search for data within the field of Social Sciences and Humanities.<BR> If you want to deposit data, please consult <a href=\"https://dans.knaw.nl/en/selection-policy-dans-data-stations/\">the selection policy</a> of the DANS Data Stations.</p>";
+        dct:publisher       [ a foaf:Agent ;
+                              foaf:name "DANS Data Station Social Sciences and Humanities"; 
+                              ] ;
+        dct:title          "DANS Data Station Social Sciences and Humanities (dev)";
         dcat:contactPoint  <https://dans.knaw.nl/en/contact/>;
         dcat:dataset       <https://doi.org/10.5072/DSS/SDPOVA> .
 
@@ -30,11 +32,13 @@ PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
         dct:issued         "2026-01-23"^^xsd:date;
         dct:license        <http://creativecommons.org/publicdomain/zero/1.0>;
         dct:modified       "2026-03-24T14:40:41Z"^^xsd:dateTime;
-        dct:publisher      <https://ror.org/008pnp284>;
+        dct:publisher       [ a foaf:Agent ;
+                              foaf:name "DANS Data Station Social Sciences and Humanities"; 
+                              ] ;
         dct:title          "Test Dataverse v6.9-DANS-DataStation-PATCH-5";
-        dct:version        "V2.1";
+        dct:hasVersion        "V2.1";
         dcat:contactPoint  <https://dans.knaw.nl/en/contact/>;
-        dcat:creator       [ rdf:type   foaf:Agent;
+        dct:creator       [ rdf:type   foaf:Agent;
                              foaf:name  "User01, Test01"
                            ];
         dcat:distribution  <https://dev.ssh.datastations.nl/api/access/datafile/4> , <https://dev.ssh.datastations.nl/api/access/datafile/3>;
@@ -78,11 +82,13 @@ PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
 
 <https://dans.knaw.nl/en/contact/>
         rdf:type                 vcard:Kind;
-        dct:identifier           <https://ror.org/008pnp284>;
-        vcard:fn                 "Data Archiving Networked Services"@en;
+        dct:identifier           "ror.org/008pnp284";
+        vcard:fn                 "Data Archiving Networked Services";
         vcard:hasEmail           <mailto:info@dans.knaw.nl>;
         vcard:hasURL             <https://dans.knaw.nl/en/contact/>;
-        vcard:organization-name  "DANS"@en .
+        vcard:organization-name  "DANS" .
+
+
 
 <http://publications.europa.eu/resource/authority/access-right/PUBLIC>
         rdf:type  dct:RightsStatement .
